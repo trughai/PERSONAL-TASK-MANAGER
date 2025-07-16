@@ -56,11 +56,9 @@ public class PersonalTaskManagerViolations {
                                                 String dueDateStr, String priorityLevel,
                                                 boolean isRecurring) {
 
-        if (!isValidTitle(title)) {
+        if (title == null || title.trim().isEmpty()) {
             System.out.println("Lỗi: Tiêu đề không được để trống.");
             return null;
-        }
-
         }
         if (dueDateStr == null || dueDateStr.trim().isEmpty()) {
             System.out.println("Lỗi: Ngày đến hạn không được để trống.");
