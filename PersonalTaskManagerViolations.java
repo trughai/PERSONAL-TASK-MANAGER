@@ -56,6 +56,10 @@ public class PersonalTaskManagerViolations {
                                                 String dueDateStr, String priorityLevel,
                                                 boolean isRecurring) {
 
+        private boolean isValidTitle(String title) {
+            return title != null && !title.trim().isEmpty();
+        }
+        // Sử dụng:
         if (!isValidTitle(title)) {
             System.out.println("Lỗi: Tiêu đề không được để trống.");
             return null;
